@@ -1,0 +1,30 @@
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+    @include e(heading) {
+        font-size:rem(30px);
+        font-weight: 800;
+        font-family: 'Hobbiton Brushhand';
+        color: $main;
+    }
+}
+
+.biography {
+    margin-bottom: 30px;
+
+    @include e(heading) {
+        font-size: rem(20px);
+        color: $blue;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

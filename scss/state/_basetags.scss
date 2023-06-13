@@ -1,7 +1,19 @@
+* {
+  box-sizing: border-box;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
 html {
     font-size: $baseFontSize;
   }
 
   body {
     font-family: $mainFont;
+    background-color: $yellow;
   }
+
+  img {
+    @extend %img-fluid;
+  }
+

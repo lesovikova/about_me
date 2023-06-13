@@ -21,17 +21,15 @@ $fifthColor: #362111;
 
 
 //Fonts
-$google-font: "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap";
+$google-font: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Norican&display=swap';
 @if variable_exists(google-font) {
     @import url($google-font);
   }
-$mainFont: 'Lora', serif;
-$baseFontSize: 16px;
 
-$curly-font: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Norican&display=swap';
-@if variable_exists($curly-font) {
-  @import url($curly-font);
-}
+$mainFont: 'Lora', serif;
+$baseFontSize: 14px;
+
+$curlyFont: 'Norican', cursive;
 
 @font-face {
   font-family: 'Hobbiton Brushhand';
