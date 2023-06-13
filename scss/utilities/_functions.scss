@@ -1,0 +1,19 @@
+
+  
+    
+  @function rem($target) {
+    @return ($target / $baseFontSize) * 1rem;
+  }
+  
+  @function em($target, $current: $baseFontSize) {
+    @return ($target / $current) * 1em;
+  }
+
+
+// A each loop to create background color in different sections 
+  //   @each $key, $value in $themes {
+  //     &--#{$key} {
+  //         background-color: $value;
+  //     }
+  // }
+  

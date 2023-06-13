@@ -1,0 +1,19 @@
+@media all and (min-width: 992px) {
+    a {
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+@media all and (min-width:768px) {
+    .search-form {
+        @include e(submit) {
+            &:hover {
+                cursor: pointer;
+                background-color: #7e808a;
+            }
+        }
+    }
+}

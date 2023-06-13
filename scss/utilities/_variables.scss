@@ -1,0 +1,40 @@
+// Path
+$hobbit-font-path: "../fonts/";
+
+// Colors
+$white: white;
+$black: black;
+$main: #2F4858;
+$blue:#336699;
+$lightBlue: #54DEFD;
+$yellow: #EDD83D;
+$pink: #E86A92;
+
+//colors for switch
+$firstColor: #54577c;
+$secondColor: #3f4413;
+$thirdColor: #d0b897;
+$fourthColor: #21a179;
+$fifthColor: #362111;
+
+
+
+
+//Fonts
+$google-font: "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap";
+@if variable_exists(google-font) {
+    @import url($google-font);
+  }
+$mainFont: 'Lora', serif;
+$baseFontSize: 16px;
+
+$curly-font: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Norican&display=swap';
+@if variable_exists($curly-font) {
+  @import url($curly-font);
+}
+
+@font-face {
+  font-family: 'Hobbiton Brushhand';
+  src: url($hobbit-font-path + "HobbitonBrushhandhobbitonBrush-WygA.ttf") format('truetype');
+  font-display: swap;
+}
