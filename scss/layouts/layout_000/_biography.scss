@@ -1,0 +1,13 @@
+
+.biography {
+    @include e(image) {
+        position: relative;
+                   &::after{
+            @include pseudo-els(0, 0) {
+                width: 100px;
+                height: 100px;
+                filter: blur(3px);
+            }
+        }
+    }
+}

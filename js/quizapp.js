@@ -1,4 +1,5 @@
 const userAnswers = [];
+const messagesField = document.querySelector('.quiz__mess');
 
 
 class QuizItem {
@@ -61,6 +62,7 @@ function getResults() {
     if(checked) {
         userAnswers.push(Number(checked.id.at(-1)));
     }
+
 }
 
 //gets the index of the current queastion in the array
@@ -70,9 +72,8 @@ function getQuestionIndex(){
     return itemIndex;
 }
 
+//checks the correct answers and returns result
 function checkAnswers(arrCorrec, arrUser) {
-    console.log(arrUser);
-    console.log(arrCorrec);
     let count = 0;
     for(let i = 0; i < arrUser.length; i++) {
         if(arrUser[i] === arrCorrec[i].correctAnswer) {
@@ -89,15 +90,20 @@ function checkAnswers(arrCorrec, arrUser) {
 const submitButton = document.querySelector('.quiz__submit').addEventListener('click', (e) => {
     e.preventDefault();
     getResults();   
-
+    const checked = document.querySelector('input[name="answer"]:checked');
     if(getQuestionIndex() == quizArray.length -1 ) {
         quizContainer.textContent = `You have answered ${checkAnswers(quizArray, userAnswers)} questions correctly`;
     }
-    else if(getQuestionIndex() < quizArray.length) {
+    else if(getQuestionIndex() < quizArray.length && checked) {
         const p = document.querySelector('.quiz__question');
         p.textContent = quizArray[getQuestionIndex() + 1].question;
-        const checked = document.querySelector('input[name="answer"]:checked');
+        
+        if(checked){
         checked.checked = false;
+        }
      }
+     else {
+        messagesField.textContent = "Please select an answer";
+    }
     
 });

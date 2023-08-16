@@ -12,7 +12,6 @@
 
 @mixin pseudo-els($top, $left, $content:"") {
 	position: absolute;	
-	font-family: 'icomoon';
 	content: $content;
 	@content;
 	top: $top;
