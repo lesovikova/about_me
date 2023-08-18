@@ -1,3 +1,59 @@
 .lists {
     margin-bottom: 20px;
+    @include e(heading) {
+        font-size: 2rem;
+        color: $firstColor;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    @include e(button){
+        width: 100%;
+        padding: 3px 30px;
+        background-color: $button;
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        box-shadow: 0 3px 4px 0 $main;
+        border-radius: 10px;
+        text-transform: capitalize;
+        &:hover{
+            box-shadow: 0 4px 8px 0 $main;
+            cursor: pointer;
+        }
+        &:focus {
+            box-shadow: 0 3px 6px 0 $main;
+            background-color: $button;
+        }
+        &:active {
+            box-shadow: 0 8px 16px 0 $main;
+        }
+    }
+    @include e(item) {
+        padding-left: 10px;
+        font-size: 1.2rem;
+        color: $fourthColor;
+        border-bottom: 1px solid $main;
+        &:first-of-type {
+            margin-top: 17px;
+        }
+        &:last-of-type {
+            margin-bottom: 17px;
+        }
+    }
+    @include e(places){
+        background-color: $thirdColor;
+        border-radius: 10px;
+    }
+    @include e(skill){
+        background-color: $thirdColor;
+        border-radius: 10px;
+
+    }
+    @include e(people){
+        background-color: $thirdColor;
+        border-radius: 10px;
+
+    }
 }

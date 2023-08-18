@@ -32,7 +32,7 @@ const places = [
 ];
 
 const people = [
-    'Gendalf the Wisard',
+    'Gandalf the Wisard',
     'Aragorn, Ranger of the North',
     'Elrond the Half-elven',
     'Gimly the Dwarf and Legolas the Elven Prince',
@@ -42,13 +42,11 @@ const people = [
 ];
 
 // Containers for data
-
     const skillsItems = document.querySelectorAll(".lists__skill p");
     const placesItems = document.querySelectorAll('.lists__places p');
     const peopleItems = document.querySelectorAll('.lists__people p');
 
 // Assigning data to containers from the start
-
     function assignItems(items, array) {
         for (let i = 0; i < items.length; i++) {
             items[i].textContent = array[i];
@@ -60,7 +58,6 @@ assignItems(placesItems, places);
 assignItems(peopleItems, people);
 
 // Changing the text of the elements on button click, scrolling up or down
-
 function changeItemsUp(items, array) {
     for (let i = 0; i < items.length; i++) {
         let tracker = array.indexOf(items[i].textContent);
