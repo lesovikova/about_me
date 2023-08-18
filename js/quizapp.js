@@ -93,6 +93,7 @@ function checkAnswers(arrCorrec, arrUser) {
 //Submit button event
 const submitButton = document.querySelector('.quiz__submit').addEventListener('click', (e) => {
     e.preventDefault();
+    messagesField.textContent = "";
     getResults();   
     const checked = document.querySelector('input[name="answer"]:checked');
     if(getQuestionIndex() == quizArray.length -1 ) {

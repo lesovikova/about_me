@@ -1,11 +1,11 @@
 .quiz {
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 40px;
     @include e(heading){
         font-size: 2.5rem;
         color: $blue;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     @include e(mess){
         margin: 5px auto;
@@ -20,13 +20,17 @@
         margin-bottom: 20px;
     }
     @include e(radio) {
-        display: inline-block;
+        display: inline-grid;
+        place-content: center;
     }
     @include e(label){
         display: inline;
         font-size: rem(17px);
         color: $fourthColor;
-        margin-left: 5px;
+        margin-left: 10px;
+        &:hover {
+            cursor: pointer;
+        }
     }
     @include e(button) {
         border: none;
@@ -41,15 +45,48 @@
         background-color: $firstColor;
         color: $white;
         &:hover{
-            box-shadow: 0 4px 8px 0 $main;
+            box-shadow: 0 4px 8px 0 $firstColor;
             cursor: pointer;
         }
         &:focus {
-            box-shadow: 0 3px 6px 0 $main;
-            background-color: $button;
+            box-shadow: 0 3px 6px 0 $firstColor;
+            background-color: $firstColor;
         }
         &:active {
-            box-shadow: 0 8px 16px 0 $main;
+            box-shadow: 0 8px 16px 0 $firstColor;
         }
     }
+    @include e(container) {
+        font-size: 1.7rem;
+        color: $firstColor;
+        font-weight: 600;
+    }
 }
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: $main;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    background-color: $yellow;
+    transform: translateY(0.2rem);
+  }
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em $button;
+  }
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
