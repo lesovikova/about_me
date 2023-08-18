@@ -27,6 +27,7 @@ const quizContainer = document.querySelector('.quiz__container');
 function displayQuestion(arr, i) {    
     const p = document.createElement('p');
     const button = document.createElement('button');
+    button.classList.add('quiz__button');
     button.textContent = "Submit";
     button.style.display = 'block';
     button.classList.add('quiz__submit');
@@ -43,15 +44,18 @@ displayQuestion(quizArray, 0);
 //displays labels and inputs for the answers
 function displayAnswers(arr, container) {
     arr.forEach((item, index) => {
+        const insContainer = document.createElement('div');
+        container.append(insContainer);
         const answer = document.createElement('LABEL');
+        answer.classList.add("quiz__label")
         const inputItem = document.createElement('INPUT');
+        inputItem.classList.add("quiz__radio")
         answer.setAttribute('for', `answer${index}`);
         inputItem.setAttribute('type', 'radio');
         inputItem.setAttribute('id', `answer${index}`);
         inputItem.setAttribute('name', 'answer');
-        inputItem.style.display = 'block';
         answer.textContent = item;
-        container.append(inputItem, answer);
+        insContainer.append(inputItem, answer);
     });
 }
 

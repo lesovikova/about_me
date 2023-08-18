@@ -1,3 +1,55 @@
 .quiz {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    @include e(heading){
+        font-size: 2.5rem;
+        color: $blue;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    @include e(mess){
+        margin: 5px auto;
+        color: $pink;
+        font-weight: 600;
+        font-size: rem(17px);
+    }
+    @include e(question) {
+        font-size: 1.3rem;
+        color: $firstColor;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    @include e(radio) {
+        display: inline-block;
+    }
+    @include e(label){
+        display: inline;
+        font-size: rem(17px);
+        color: $fourthColor;
+        margin-left: 5px;
+    }
+    @include e(button) {
+        border: none;
+        box-shadow: 0 3px 4px 0 $main;
+        border-radius: 10px;
+        text-transform: capitalize;
+        padding: 5px 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 20px;
+        background-color: $firstColor;
+        color: $white;
+        &:hover{
+            box-shadow: 0 4px 8px 0 $main;
+            cursor: pointer;
+        }
+        &:focus {
+            box-shadow: 0 3px 6px 0 $main;
+            background-color: $button;
+        }
+        &:active {
+            box-shadow: 0 8px 16px 0 $main;
+        }
+    }
 }
