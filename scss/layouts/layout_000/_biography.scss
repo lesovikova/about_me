@@ -16,4 +16,9 @@
         margin-bottom: 20px;
         padding: 8px;
     }
+    img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
 }

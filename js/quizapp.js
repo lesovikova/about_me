@@ -97,7 +97,7 @@ const submitButton = document.querySelector('.quiz__submit').addEventListener('c
     getResults();   
     const checked = document.querySelector('input[name="answer"]:checked');
     if(getQuestionIndex() == quizArray.length -1 ) {
-        quizContainer.textContent = `You have answered ${checkAnswers(quizArray, userAnswers)} questions correctly`;
+        quizContainer.textContent = `You have answered ${checkAnswers(quizArray, userAnswers)} out of ${quizArray.length} questions correctly`;
     }
     else if(getQuestionIndex() < quizArray.length && checked) {
         const p = document.querySelector('.quiz__question');
