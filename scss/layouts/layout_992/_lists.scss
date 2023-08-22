@@ -1,0 +1,15 @@
+@media all and (min-width: 992px) {
+    .lists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include e(header){
+            width: 100%;
+            margin: 0;
+        }
+        @include e(list) {
+            max-width: 290px;
+        }
+    }
+    
+}
